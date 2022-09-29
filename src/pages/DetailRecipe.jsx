@@ -28,6 +28,10 @@ function Detail() {
     }
   }, [recipe]);
 
+  // const splitIngredient = detailRecipe?.ingredient.split("\n");
+  // console.log(splitIngredient);
+  console.log(detailRecipe?.ingredient);
+
   return (
     <>
       <Helmet>
@@ -53,13 +57,13 @@ function Detail() {
         </div>
         <div className="my-4">
           <h3>Ingredients</h3>
-          {detailRecipe?.ingredient}
+          <p className="paragraph"> {detailRecipe?.ingredient}</p>
 
           {/* <ul>
-            {splitIngredient.map((item) => (
+            {detailRecipe?.ingredient.map((item) => (
               <li className="list">{item}</li>
-            ))}
-          </ul> */}
+            ))} */}
+          {/* </ul> */}
         </div>
         <div className="my-4">
           <h3>Video Step</h3>
